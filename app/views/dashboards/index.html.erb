@@ -1,0 +1,22 @@
+<h2>User Listing</h2>
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Filters</a>
+
+
+
+
+<div class="collapse" id="collapseExample">
+  	<div class="card card-body">
+    	<%= form_tag dashboards_path, :method => 'get', class: "form-inline", remote: true do %>
+			<%= hidden_field_tag :search, 'YES' %>
+			Age : <%= text_field_tag :age, params[:age], class: "form-control mb-2 mr-sm-2"%>
+			Gender : <%= text_field_tag :gender, params[:gender], class: "form-control mb-2 mr-sm-2"%>
+			Country : <%= text_field_tag :country, params[:country], class: "form-control mb-2 mr-sm-2"%>
+		
+			<%= submit_tag "Search", class: 'btn btn-primary mb-2' %>
+		<% end %>
+  	</div>
+</div>
+      
+<div id="product-list">
+<%= render partial: 'users', locals:{users: @users}%>
+</div>
