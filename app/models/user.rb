@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :country, :presence => true
   
   devise :database_authenticatable, :registerable,:recoverable, :rememberable, :validatable
+   self.per_page = 10
 end
