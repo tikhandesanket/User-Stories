@@ -30,7 +30,7 @@ gem 'devise'
 gem 'pry'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
-
+gem 'faker'
 gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 gem 'jquery-rails'
 gem 'rubyzip', '>= 1.2.1'
