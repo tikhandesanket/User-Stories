@@ -1,15 +1,13 @@
 <nav class="navbar navbar-default">
   	<div class="container-fluid">
-	<!-- 	<div class="navbar-header">
-	  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
+		<div class="navbar-header">
+	  		<button type="button" class="btn btn-success mb-2 navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				
 	  		</button>
-	  	<!-- 	<%#= link_to root_path, class: 'navbar-brand' do %>
-				Product Info
-	  		<%# end %> -->
-		<!-- </div> --> 
+	  	<%= link_to root_path, class: 'navbar-brand' do %>
+				User Info
+	  		<% end %>
+		</div>
 		<div class="collapse navbar-collapse" id="myNavbar">
 	  		<ul class="nav navbar-nav navbar-right">
 	  			<% if user_signed_in? %>
