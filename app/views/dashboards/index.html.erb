@@ -8,7 +8,7 @@
 			Gender : <%= text_field_tag :gender, params[:gender], class: "form-control mb-2 mr-sm-2"%>
 			Country : <%= text_field_tag :country, params[:country], class: "form-control mb-2 mr-sm-2"%>
 		
-			<%= submit_tag "Search", class: 'btn btn-primary mb-2' %>
+			<%= submit_tag "Search", class: 'btn btn-dark mb-2' %>&nbsp;&nbsp;<%= button_tag "Reset", type: :reset ,class: 'btn btn-dark mb-2' %>
 		<% end %>
   	</div>
 </div>
