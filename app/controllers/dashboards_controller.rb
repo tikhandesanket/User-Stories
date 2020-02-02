@@ -3,10 +3,11 @@ class DashboardsController < ApplicationController
 
 
 	def index	
-		if params[:search].present?		
-			@users = User.where("age = ? OR gender = ? OR country = ?", params[:age],params[:gender],params[:country]).paginate(:page => params[:page], :per_page => 5)
+		if params[:search].present?	&& ( params[:age].present? || params[:gender].present?  || params[:country].present? )
+			@users = User.where("age = ? OR gender = ? OR country = ?", params[:age],params[:gender],params[:country]).paginate(page: params[:page], per_page: 5)
 		else
-			@users = User.all
+			@users = User.all.paginate(page: params[:page], per_page: 5)
+		
 		end
 
 		respond_to do |format|
